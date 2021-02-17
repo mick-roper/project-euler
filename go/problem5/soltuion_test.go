@@ -20,7 +20,7 @@ func Test_smallestMultiple(t *testing.T) {
 		{
 			name: "smallest number that can be divided between 1 to 10 without remainder is 2520",
 			args: args{start: 1, end: 20},
-			want: 2520,
+			want: 232792560,
 		},
 	}
 	for _, tt := range tests {
