@@ -3,7 +3,7 @@ name: golang
 on:
   push:
     paths:
-    - .github/workflows/golang.yaml
+    - .github/workflows/go.yaml
     - '**.go'
 
 jobs:
@@ -16,5 +16,11 @@ jobs:
       uses: actions/setup-go@v2
       with:
         go-version: 1.15
+    - name: Setup gotestsum
+      uses: autero1/action-gotestsum@v0.1.0
+      with:
+        gotestsum_version: 1.6.1
     - name: run go test
-      run: go test ./go/...
+      run: | 
+        cd go
+        gotestsum --format dots
