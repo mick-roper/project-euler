@@ -1,23 +1,28 @@
 package problem3
 
-func largestPrimeFactor(prime int) int {
-	rPrime := -1
+import "math"
+
+func largestPrimeFactor(candidate int) int {
 	nPrime := 2
-	xPrime := prime
+	x := candidate
 	factors := []int{}
+
+	if isPrime(candidate) {
+		return candidate
+	}
 
 	for {
 		// 1: check start prime / nprime is a whole number..
-		if rPrime = xPrime / nPrime; rPrime%nPrime == 0 || isPrime(rPrime) {
-			// 3: add nPrime to the factors
+		if mod := math.Mod(float64(x), float64(nPrime)); mod == 0 {
+			factor := x / nPrime
 			factors = append(factors, nPrime)
 
 			// 2: check if the result is prime...
-			if isPrime(rPrime) {
-				factors = append(factors, rPrime)
+			if isPrime(factor) {
+				factors = append(factors, factor)
 				break
 			} else {
-				xPrime = rPrime
+				x = factor
 			}
 		} else { // bump to the next prime
 			nPrime = nextPrime(nPrime)

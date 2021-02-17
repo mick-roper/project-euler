@@ -13,15 +13,30 @@ func Test_largestPrimeFactor(t *testing.T) {
 		args args
 		want int
 	}{
-		// {
-		// 	name: "largest prime factor of 12 is 3",
-		// 	args: args{prime: 12},
-		// 	want: 3,
-		// },
+		{
+			name: "largest prime factor of 17 is 17",
+			args: args{prime: 17},
+			want: 17,
+		},
+		{
+			name: "largest prime factor of 12 is 3",
+			args: args{prime: 12},
+			want: 3,
+		},
+		{
+			name: "largest prime factor of 147 is 7",
+			args: args{prime: 147},
+			want: 7,
+		},
 		{
 			name: "largest prime factor of 13195 is 29",
 			args: args{prime: 13195},
 			want: 29,
+		},
+		{
+			name: "largest prime factor of 600851475143 is 6857",
+			args: args{prime: 600851475143},
+			want: 6857,
 		},
 	}
 	for _, tt := range tests {
