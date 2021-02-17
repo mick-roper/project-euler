@@ -1,0 +1,6 @@
+name: golang
+
+on:
+  push:
+    paths:
+      - go/**
