@@ -17,7 +17,7 @@ func Test_fibonacciSum(t *testing.T) {
 			want: 44,
 		},
 		{
-			name: "ceiling of 4000000, even fibs sum = 44",
+			name: "ceiling of 4000000, even fibs sum = 4613732",
 			args: args{ceiling: 4000000},
 			want: 4613732,
 		},
