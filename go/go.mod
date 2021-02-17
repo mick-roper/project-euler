@@ -1,3 +1,3 @@
-module github.com/mick-roper/project-euler
+module github.com/mick-roper/project-euler/go
 
 go 1.15
